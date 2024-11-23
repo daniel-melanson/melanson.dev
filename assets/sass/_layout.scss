@@ -36,7 +36,7 @@
 
 // Content
 .posts-item-note {
-  padding-bottom: .3rem;
+  padding-bottom: 0.3rem;
   font-weight: 500;
   color: $black;
 }
@@ -87,6 +87,56 @@
   }
 }
 
+// Footer
+.footer {
+  margin-top: 8em;
+  margin-bottom: 2em;
+  text-align: center;
+  @include media-query($on-mobile) {
+    margin-top: 3em;
+  }
+  span.footer_item {
+    opacity: 0.8;
+    font-weight: $bold-weight;
+    font-size: $small-font-size;
+  }
+  a.footer_item {
+    opacity: 0.8;
+    text-decoration: none;
+    &:not(:last-child) {
+      margin-right: 10px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &_copyright {
+    font-size: $small-font-size - 1;
+    display: block;
+    color: $gray;
+    opacity: 0.8;
+    margin-top: 0.7rem;
+    padding: 0.3rem 0.95rem;
+  }
+  &_social-icons {
+    a {
+      text-decoration: none;
+    }
+    a:not(:last-child) {
+      margin-right: 1em;
+    }
+
+    svg {
+      color: #888a90;
+      height: 24px;
+      width: 24px;
+      &:hover {
+        color: rgb(221, 221, 221);
+      }
+    }
+  }
+}
+
 .not-found {
   text-align: center;
   display: flex;
@@ -111,7 +161,6 @@
     color: $text-link-blue-active;
   }
 }
-
 
 .search-article {
   position: relative;
@@ -165,10 +214,10 @@
   }
 }
 
-
 /* Add styles for sub, sup, kbd, mark */
 
-sub, sup {
+sub,
+sup {
   font-size: 79%;
   line-height: 0;
   position: relative;

@@ -1,15 +1,15 @@
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
         <a class="menu-link" href="{{ .Site.Home.Permalink }}">Daniel Melanson</a>
-        {{ range .Site.Params.social }}
-        <a class="menu-link" href="{{ .url }}" target="_blank" rel="noopener noreferrer me"> 
-          {{ .name }}
-        </a>
-        {{ end }}
         <input type="checkbox" id="menu-trigger" class="menu-trigger" />
         <label for="menu-trigger">
             <span class="menu-icon">
-                {{ partial "svgs/menu.svg" (dict "height" 25 "width" 25) . }}
+              {{ $ctx := dict
+                  "vendor" "lucide"
+                  "name" "menu"
+                  "size" "25px"
+              }}
+              {{ partial "icons/icon" $ctx }}
             </span>
         </label>
         <div class="trigger">
