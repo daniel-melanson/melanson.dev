@@ -121,11 +121,13 @@
   &_social-icons {
     a {
       text-decoration: none;
+      &:focus {
+        outline: none;
+      }
+      &:not(:last-child) {
+        margin-right: 1em;
+      }
     }
-    a:not(:last-child) {
-      margin-right: 1em;
-    }
-
     svg {
       color: #888a90;
       height: 24px;
