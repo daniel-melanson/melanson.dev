@@ -2,6 +2,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+{{ if eq .RelPermalink .Site.Home.RelPermalink }}
+<title itemprop="name">{{ .Site.Title }}</title>
+{{ else }}
+<title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
+{{ end}}
 <title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
 <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />

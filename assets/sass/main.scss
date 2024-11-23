@@ -42,13 +42,9 @@ $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.85;
 
-// Font weight
-// $light-weight: 300; // uncomment if necessary
 $normal-weight: 400;
 $bold-weight: 700;
-// $black-weight: 900; // uncomment if necessary
 
-//////////////// 4.Responsive design (media queries) /////////////////
 $wide-size: 890px;
 $narrow-size: 720px;
 
@@ -63,16 +59,14 @@ $on-desktop: 1024px;
 $on-widescreen: 1152px;
 
 @mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
+  @media screen and (max-width: $device) {
+    @content;
+  }
 }
 
 @mixin relative-font-size($ratio) {
-    font-size: $base-font-size * $ratio;
+  font-size: $base-font-size * $ratio;
 }
-
-//////////////// 5. Import all sass files /////////////////
 
 @import "fonts";
 @import "base";
@@ -85,8 +79,3 @@ $on-widescreen: 1152px;
 @import "miscellaneous";
 @import "dark";
 @import "listpage";
-@import "custom";
-
-{{ with .Site.Params.goToTop }}
-@import "goToTop";
-{{ end }}

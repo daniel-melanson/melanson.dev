@@ -1,20 +1,15 @@
 <!DOCTYPE html>
-{{- $defaultColor := .Site.Params.defaultColor | default "auto" -}}
-
-{{/* allow website developer to enforce default dark mode */}}
-<html lang="{{ .Site.LanguageCode }}" class="{{ $defaultColor }}">
+<html lang="{{ .Site.LanguageCode }}">
 <head>
   {{- partial "head.html" . -}}
 </head>
-
-<body data-theme="{{ $defaultColor }}" class="notransition">
-    {{- partial "scriptsBodyStart.html" . -}}
-    {{- partial "header.html" . -}}
+<body>
+    {{ partial "header.html" . }}
     <div class="wrapper">
-        {{ partial "bio" . }}
         <main aria-label="Content">
-            <h3 class="posts-item-note" aria-label="Recent Posts">{{ T "home.recent_posts" }}</h3>
-            {{/* Show last 5 posts in reverse date order */}}
+            {{ .Content }}
+            <h3 aria-label="Experience">Experience</h3>
+            <h3 aria-label="Recent Posts">Recent Posts</h3>
             {{ $pagesToShow := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
             {{ $posts := $pagesToShow.ByDate.Reverse }}
             {{ range first 5 $posts }}
@@ -23,14 +18,11 @@
             {{ if gt (len $posts) 5 }}
             <p>
                 {{ range $firstSection := (where .Site.Sections "Section" "in" (first 1 (.Site.Params.mainSections))) }}
-                <a href="{{ $firstSection.Permalink }}">{{ T "home.see_all_posts" }}</a>
+                <a href="{{ $firstSection.Permalink }}">See all posts</a>
                 {{ end }}
             </p>
             {{ end }}
         </main>
     </div>
-    {{- partial "footer.html" . -}}
-    {{- partial "scriptsBodyEnd.html" . -}}
 </body>
-
 </html>

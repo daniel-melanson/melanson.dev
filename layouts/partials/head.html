@@ -1,12 +1,6 @@
 {{- partial "meta/main.html" . }}
 {{- hugo.Generator }}
 
-{{/* Open Graph tags */}}
-{{ template "_internal/opengraph.html" . }}
-
-{{/* Twitter Card tags */}}
-{{ template "_internal/twitter_cards.html" . }}
-
 {{/* Canonical link, RSS */}}
 
 <link rel="canonical" href="{{ .Permalink }}">
@@ -29,21 +23,5 @@
 <link rel="mask-icon" href="{{ (resources.Get "icons/safari-pinned-tab.svg").RelPermalink }}">
 <link rel="shortcut icon" href="{{ (resources.Get "icons/favicon.ico" | resources.Copy "favicon.ico").RelPermalink }}">
 
-<meta name="theme-color" content="{{ .Site.Params.webmanifest.theme_color | default "#434648" }}">
-
-{{/* SVG favicon for the modern web */}}
 <link rel="icon" type="image/svg+xml" href="{{ (resources.Get "icons/favicon.svg").RelPermalink }}">
 
-{{/* Katex support (enabled on specific pages). See 'helpers/katex.html' for more info. */}}
-
-{{- if or .Params.math .Site.Params.math }}{{ partial "helpers/katex.html" . -}}{{- end -}}
-
-{{/* Google analytics script. See hugo.toml to enable/disable this. */}}
-{{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{ template "_internal/google_analytics.html" . }}
-{{- end -}}
-
-{{/* Extend head with user supplied partial */}}
-{{ if templates.Exists "partials/custom-head.html" }}
-  {{ partial "custom-head.html" . }}
-{{ end }}
