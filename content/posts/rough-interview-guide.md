@@ -29,32 +29,37 @@ At the very least, your interviewer will be evaluating you on:
 2. **Problem Solving** - Ability to understand, relate, and solve the problem.
 3. **Implementation** - Write clean, efficient, and correct code.
 4. **Testing** - Design normal and edge cases for your solution.
-5. **Reasoning** - Ability to explain and reason about the complexity of applied algorithms, data structures, and solution.
+5. **Reasoning** - Ability to explain and reason about the complexity of applied algorithms, data structures, and your solution.
 
 Consider all of these aspects during your interview.
 Do not focus on one aspect at the expense of the others.
 
 Your ability to reason about the algorithmic complexity of your solution is something I do not think is discussed enough.
-Always expect to be asked about the complexity of your solution.
+Be prepared for a discussion about the complexity of your solution.
 
 ## 1. Read
 
 ```python
 def threeSum(nums: List[int]) -> List[List[int]]:
   """
-  Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+  Given an integer array nums,
+  return all the triplets [nums[i], nums[j], nums[k]]
+  such that i != j, i != k, and j != k, 
+  and nums[i] + nums[j] + nums[k] == 0.
   """
 
   # Input: List[int]
   # Output: List[[int, int, int]] 
-  # All possible triplets such that nums[i] + nums[j] + nums[k] == 0 and len(set([i, j, k])) == 3
+  # All possible triplets such that
+  # nums[i] + nums[j] + nums[k] == 0 
+  # and len(set([i, j, k])) == 3
 
   # Constraints:
   # - 3 <= nums.length <= 3000
   # - -10^5 <= nums[i] <= 10^5
 
   # Notes:
-  # - Input can contain duplicates, but the output should not.
+  # - Input can contain duplicates, but the output should not
   # - Only one set for any input
   # - Output can be in any order
 
@@ -83,8 +88,10 @@ Ask yourself if you can use the properties of the constraints to your advantage.
 ## 2. Example
 
 ```python
-nums = [0, 0, 0] # Extract arguments outside of the call for easy testing
-print("Expected: [[0, 0, 0]], Actual: ", threeSum(nums)) # Print meaningful messages
+# Extract arguments outside of the call for easy testing
+nums = [0, 0, 0] 
+# Print meaningful messages
+print("Expected: [[0, 0, 0]], Actual: ", threeSum(nums)) 
 
 nums = [-1, 0, 1, 2, -1, -4]
 print("Expected: [[-1, 0, 1], [-1, -1, 2]], Actual: ", threeSum(nums))
@@ -197,8 +204,9 @@ def threeSum(nums: List[int]) -> List[List[int]]:
 
   result = []
   for i, a in enumerate(nums):
-    # skip if the same as previous or if the current number is positive
-    if a > 0 and a == nums[i - 1]:
+    # skip if the current number is positive 
+    # or the same as the previous
+    if a > 0 or a == nums[i - 1]:
       continue
 
     # run two pointer 2Sum with a target of -nums[i]
