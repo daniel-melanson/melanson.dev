@@ -26,8 +26,8 @@ $base-line-height: 1.85;
 $normal-weight: 400;
 $bold-weight: 700;
 
-$wide-size: 890px;
-$narrow-size: 720px;
+$wide-size: 990px;
+$narrow-size: 850px;
 
 // Padding unit
 $spacing-full: 30px;
@@ -56,6 +56,5 @@ $on-widescreen: 1152px;
 @import "post";
 @import "code";
 
-@import "tableOfContent";
 @import "miscellaneous";
 @import "listpage";
