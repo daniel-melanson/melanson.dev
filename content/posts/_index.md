@@ -3,7 +3,7 @@ menus = 'main'
 title = 'Posts'
 +++
 
-I maintain this blog to organize my thoughts, share things I have done, and test the depth of my knowledge.
+I maintain this blog to organize my thoughts and share things I have done.
 
 The thoughts and opinions expressed here are my own and do not reflect those of my past or current employers.
 

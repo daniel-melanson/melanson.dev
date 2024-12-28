@@ -19,7 +19,7 @@ This blog post encapsulates my lessons, and wisdom from others, into a high-leve
 Obviously, these steps should be done in order, but they do not need to be independent of each other ([Step 5](#5-decompose) and [Step 6](#6-implement) can be done in simultaneously).
 
 Something not discussed in this post, but still important, is giving an nice introduction about yourself and ending the interview with questions about the company and role.
-[This article](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) explains this in more detail.
+[The Tech Interview Handbook](https://www.techinterviewhandbook.org/coding-interview-cheatsheet/) explains this in more detail.
 
 ## 0. Things To Consider
 
@@ -124,6 +124,8 @@ def threeSum(nums: List[int]) -> List[List[int]]:
     # if it is, add it to the result
 
   # return the result 
+
+  # Worst case: O(n^3)
 ```
 Forget about developing an efficient algorithm.
 State a naive approach out loud or using _rough_ pseudo-code.
@@ -145,9 +147,14 @@ Your interviewer may give you some hints that will guide you towards an optimal 
 def threeSum(nums: List[int]) -> List[List[int]]:
   pass
 
-  # Assuming (a + b + c == 0), we can reduce the problem to 2Sum with a target of -c
-  # 2Sum can be solved in O(n) time using a hash table, but we need to check for duplicates
-  # If we sort the input, we can use two pointers to find the two numbers that sum to -c and easily skip duplicates
+  # With a + b + c == 0, we can reduce the problem to twoSum
+  # with a target of -c. twoSum can be solved in O(n) time 
+  # using a hash table, but we still need to check for duplicates.
+  #
+  # If we sort the input then we can use two pointers 
+  # to solve the twoSum problem and easily skip duplicates.
+  #
+  # Worst case: O(n^2)
 ```
 
 This step is the most difficult and requires a significant amount of pattern recognition and the knowledge of similar problems.
