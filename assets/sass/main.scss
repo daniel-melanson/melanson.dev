@@ -16,8 +16,8 @@ $smoke: #4a4d56;
 $gray: #767f87;
 
 //////////////// 3. Fonts preferences /////////////////
-$sans-family: Roboto, sans-serif;
-$mono-family: Consolas, monospace;
+$sans-family: "Inter var","Inter","Helvetica Neue",Helvetica,Arial,sans-serif;
+$mono-family: "JetBrains Mono var","JetBrains Mono","SFMono-Regular",Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
 $base-font-size: 16px;
 $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;

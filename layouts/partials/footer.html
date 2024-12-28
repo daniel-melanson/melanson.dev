@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer_social-icons">
         {{ range site.Params.social }}
-        <a href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name }}">
+        <a class="social-link" href="{{ trim .url " " }}" target="_blank" rel="noopener noreferrer me" title="{{ .name }}">
           {{ $ctx := dict
               "vendor" "simple-icons"
               "name" ( .name | lower )
