@@ -9,7 +9,7 @@
         <main aria-label="Content">
             {{ .Content }}
             <h3 aria-label="Recent Posts">Recent Posts</h3>
-            {{ $pagesToShow := where .Site.RegularPages "Type" "in" site.Params.mainSections }}
+            {{ $pagesToShow := where .Site.RegularPages "Section" "posts" }}
             {{ $posts := $pagesToShow.ByDate.Reverse }}
             {{ range first 5 $posts }}
             {{ partial "postCard" . }}
