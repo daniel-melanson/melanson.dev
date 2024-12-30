@@ -1,0 +1,29 @@
+<article class="project-item">
+    <div class="project-item-tags">
+        {{ range .Params.tags }}
+        {{ $hash := hash.FNV32a . }}
+        {{ $hue := mod $hash 360 }}
+        {{ $saturation := 30 }}
+        {{ $lightness := 25 }}
+        <span class="project-item-tag" style="background-color: hsl({{ $hue }}, {{ $saturation }}%, {{ $lightness }}%)">{{ . }}</span>
+        {{ end }}
+    </div>
+    <p class="project-item-description"><span class="project-item-title">{{ .Title }}</span>{{ .Description }}</p>
+    <div class="project-item-links">
+    {{ if .Params.source }}
+    <a href="{{ .Params.source }}" target="_blank" rel="noopener noreferrer" >Source
+    {{ partial "icons/icon" (dict "vendor" "lucide" "name" "external-link" "size" "0.85em") }}
+    </a>
+    {{ end }}
+    {{ if .Params.production }}
+    <a href="{{ .Params.production }}" target="_blank" rel="noopener noreferrer">Production
+    {{ partial "icons/icon" (dict "vendor" "lucide" "name" "external-link" "size" "0.85em") }}
+    </a>
+    {{ end }}
+    {{ if .Params.demo }}
+    <a href="{{ .Params.demo }}" target="_blank" rel="noopener noreferrer">Demo
+    {{ partial "icons/icon" (dict "vendor" "lucide" "name" "external-link" "size" "0.85em") }}
+    </a>
+    {{ end }}
+    </div>
+</article>

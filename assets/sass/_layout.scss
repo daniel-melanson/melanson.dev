@@ -51,6 +51,49 @@
   }
 }
 
+// Project list
+.project-item {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+
+  .project-item-title {
+    font-weight: 900;
+    margin-right: 0.5rem;
+  }
+
+  .project-item-tags {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+
+    .project-item-tag {
+      padding: 0rem 0.25rem;
+      border-radius: 0.2rem;
+      font-size: 0.75rem;
+    }
+  }
+
+  .project-item-description {
+    grid-column: 1 / 4;
+    margin: 0.25rem 0;
+  }
+
+  .project-item-links {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    a {
+      color: $text-base-color;
+    }
+  }
+}
+
 // Footer
 .footer {
   margin-top: 8em;
