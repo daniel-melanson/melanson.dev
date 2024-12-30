@@ -6,4 +6,3 @@ source = 'https://github.com/daniel-melanson/spire-api.melanson.dev'
 production = 'https://spire-api.melanson.dev'
 tags = ['Django', 'Docker', 'AWS', 'GCP']
 +++
-
