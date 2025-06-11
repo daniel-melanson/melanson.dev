@@ -1,6 +1,6 @@
 Software engineer and programmer.
-Building web platforms for the United States Department of Homeland Security at [MITRE](https://www.mitre.org/).
+Querying abstractions and optimizations at Sigma Computing.
 
-Previously, worked on data governance and software solutions at Liberty Mutual.
+Previously, built web platforms at MITRE and data governance software at Liberty Mutual.
 
 Master's in computer science from UMass Amherst.
