@@ -11,9 +11,6 @@ name = "Daniel Melanson"
 name = "LinkedIn"
 url = "https://www.linkedin.com/in/daniel-w-melanson/"
 [[params.social]]
-name = "LeetCode"
-url = "https://leetcode.com/u/daniel-melanson/"
-[[params.social]]
 name = "Github"
 url = "https://github.com/daniel-melanson"
 

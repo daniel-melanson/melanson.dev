@@ -1,6 +1,6 @@
-Software engineer and programmer.
-Querying abstractions and optimizations at Sigma Computing.
+Engineer.
+Building AI that helps small businesses run themselves at [Lassie](https://www.lassie.ai/).
 
-Previously, built web platforms at MITRE and data governance software at Liberty Mutual.
+Previously, query optimization at Sigma Computing and web platforms at MITRE.
 
 Master's in computer science from UMass Amherst.

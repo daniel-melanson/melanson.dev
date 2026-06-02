@@ -1,4 +1,3 @@
 +++
-menus = 'main'
 title = 'Posts'
 +++
